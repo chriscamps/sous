@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #ffffff;
+  --color-panel: #ffffff;
+  --color-card: #ffffff;
+  --color-ink: #111111;
+  --color-muted: #666666;
+  --color-line: #e8e8e8;
+  --color-soft: #f7f7f7;
+  --color-accent: #ff6b00;
+  --color-accent-hover: #e55f00;
+  --color-amber: #c27c1a;
+  --color-green: #16a34a;
+  --color-red: #dc2626;
+
+  --font-sans: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-card: 16px;
+  --radius-btn: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #111008;
+    --color-panel: #181410;
+    --color-card: #1e1a14;
+    --color-ink: #f3ece0;
+    --color-muted: #9e9080;
+    --color-line: #302820;
+    --color-soft: #252018;
+    --color-accent: #ff7a1a;
+    --color-accent-hover: #ff9240;
+  }
+}
+
+/* Semantic status colours — explicitly on :root so they're available outside Tailwind utilities */
+:root {
+  --color-green: #16a34a;
+  --color-amber: #c27c1a;
+  --color-red: #dc2626;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
